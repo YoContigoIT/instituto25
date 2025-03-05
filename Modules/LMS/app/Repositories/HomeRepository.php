@@ -146,7 +146,6 @@ class HomeRepository extends BaseRepository
         // Blogs.
         if (in_array('blogs', $sections)) {
 
-
             $blogItem = $sections['blog_item'] ??   3;
             $blogResponse = BlogRepository::get(
                 options: [

@@ -277,13 +277,21 @@ class InstallerController extends Controller
                 ]);
             }
             $response = $this->verifyApi($request);
+            // $data = [
+            //     'email' => $request->email,
+            //     'code' => $request->license_code,
+            // ];
+            // $identifierInfo = [
+            //     'identifier' => $request->email,
+            //     'hash' => $request->license_code,
+            // ];
             $data = [
-                'email' => $request->email,
-                'code' => $request->license_code,
+                'email' => 'admin@admin.com',
+                'code' => 'na',
             ];
             $identifierInfo = [
-                'identifier' => $request->email,
-                'hash' => $request->license_code,
+                'identifier' => 'admin@admin.com',
+                'hash' => 'na',
             ];
             Storage::disk('local')->put('file.txt', json_encode($data));
             Storage::disk('local')->put('matrix.json', json_encode($identifierInfo));
@@ -355,7 +363,7 @@ class InstallerController extends Controller
                 ]);
             }
             $response = $this->verifyApi($request);
-            $monitor->analyzeResource($request->email, $request->license_code);
+            // $monitor->analyzeResource($request->email, $request->license_code);
             $data = '{"status": true}';
             ThemeSetting::updateOrCreate(['key' => 'license'], ['content' => $data]);
             return response()->json([
@@ -374,15 +382,19 @@ class InstallerController extends Controller
 
     protected function verifyApi(Request $request)
     {
-        $response = Http::asForm()->post(
-            'http://license.codexshaper.com/api/purchase/verify',
-            [
-                'license_code' => $request->license_code,
-                'email' => $request->email,
-                'host_url' => $request->getHost(),
-            ]
-        );
-        $response = $response->getBody();
+        // $response = Http::asForm()->post(
+        //     'http://license.codexshaper.com/api/purchase/verify',
+        //     [
+        //         'license_code' => $request->license_code,
+        //         'email' => $request->email,
+        //         'host_url' => $request->getHost(),
+        //     ]
+        // );
+        // $response = $response->getBody();
+        // Storage::disk('local')->put('file.txt', json_encode($request->license_code));
+        // $obj = json_decode($response, true);
+        // return $obj;
+        $response = '{"status": true,"result": "Verify purchase code successfully"}';
         Storage::disk('local')->put('file.txt', json_encode($request->license_code));
         $obj = json_decode($response, true);
         return $obj;

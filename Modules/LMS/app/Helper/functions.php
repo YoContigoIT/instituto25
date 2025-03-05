@@ -684,7 +684,7 @@ if (!function_exists('indexFile')) {
 /**
  * Retrieve the latest categories.
  *
- * This function fetches the most recent top-level categories (where parent_id is null) 
+ * This function fetches the most recent top-level categories (where parent_id is null)
  * that are active (status = 1), along with a count of their associated courses.
  *
  * @param int $item The number of categories to retrieve. Default is 9.
@@ -721,8 +721,8 @@ if (!function_exists('latestCategory')) {
 /**
  * Retrieve active course categories with approved courses.
  *
- * This function fetches the top-level categories (where parent_id is null) 
- * that are active (status = 1) and have approved courses. 
+ * This function fetches the top-level categories (where parent_id is null)
+ * that are active (status = 1) and have approved courses.
  * It also counts the number of approved courses in each category.
  *
  * @param int|null $item The maximum number of categories to retrieve. Default is 9.
@@ -1500,7 +1500,7 @@ if (!function_exists('instructor_student')) {
      * Retrieve purchase details based on course IDs
      *
      * @param array $courseId Array of course IDs to filter purchases
-     * @return Collection|int Returns a collection of purchase details if course IDs are provided, 
+     * @return Collection|int Returns a collection of purchase details if course IDs are provided,
      *                        otherwise returns 0
      */
     function instructor_student(array $coursesId)
@@ -1524,7 +1524,7 @@ if (!function_exists('instructorOrgUser_review')) {
     /**
      *  instructorOrgUser_review
      *
-     * @param array $coursesId 
+     * @param array $coursesId
      *
      * @return array
      */
@@ -1794,7 +1794,7 @@ if (! function_exists('active_theme_slug')) {
     function active_theme_slug()
     {
         $theme = active_theme();
-        return $theme->slug ?? 'default';
+        return $theme->slug ?? 'lms-education';
     }
 }
 

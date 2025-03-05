@@ -15,10 +15,10 @@
 
 @layer base {
     :root {
-        --color-primary: #5f3eed;
-        --color-primary-50: #f7f4ff;
-        --color-primary-100: #e5deff;
-        --color-primary-200: #f2ecfe;
+        --color-primary: #6a1c32;
+        --color-primary-50: #f5e2e6; /* Muy claro, casi blanco con un toque */
+        --color-primary-100: #ead2d8; /* Ligero, suave */
+        --color-primary-200: #e0c2c8; /* Un poco más de presencia */
         --color-secondary: #f4b826;
         --color-heading: #111827;
 
@@ -84,7 +84,7 @@
         @apply inline-block relative bg-text-highlighter bg-no-repeat bg-[length:100%_auto] bg-bottom;
     }
     .area-title .title-highlight-two {
-        @apply text-primary font-secondary font-medium italic;
+        @apply italic font-medium text-primary font-secondary;
     }
     .area-description {
         @apply text-heading/70 font-medium lg:[&.desc-lg]:text-[18px] lg:[&.desc-lg]:leading-[1.55];
@@ -107,7 +107,7 @@
         @apply flex flex-col gap-3 mt-6;
     }
     .footer-widget-one > ul li a {
-        @apply text-white/60 font-medium hover:text-white custom-transition leading-none;
+        @apply font-medium leading-none text-white/60 hover:text-white custom-transition;
     }
     .effect-nav-menu {
         @apply relative after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full [&.active]:after:w-full after:duration-300;
@@ -116,7 +116,7 @@
         @apply fixed size-full flex-center flex-col z-[999] bg-white;
     }
     .pre-loader-wrapper .pre-loader {
-        @apply relative size-12 rounded-50 border-2 border-primary animate-spin;
+        @apply relative border-2 size-12 rounded-50 border-primary animate-spin;
     }
     .pre-loader-wrapper .pre-loader {
         @apply after:absolute after:size-3 after:rounded-50 after:top-1.5 after:left-1.5 after:border after:border-secondary;
@@ -125,7 +125,7 @@
 
 @layer utilities {
     .position-center {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+        @apply absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
     }
     .custom-transition {
         @apply transition duration-300 ease-out;
