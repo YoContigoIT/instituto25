@@ -17,16 +17,21 @@ class ThemeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    // public function index(): View
+    // {
+
+    //     $response = $this->themeRepository->getInstalledThemes();
+    //     $themes = [];
+
+    //     if ($response['success'] === true) {
+    //         $themes = $response['themes'];
+    //     }
+    //     return view('portal::admin.theme.index', compact('themes'));
+    // }
+
+    public function index()
     {
-
-        $response = $this->themeRepository->getInstalledThemes();
-        $themes = [];
-
-        if ($response['success'] === true) {
-            $themes = $response['themes'];
-        }
-        return view('portal::admin.theme.index', compact('themes'));
+        return;
     }
 
     /**
