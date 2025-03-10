@@ -176,17 +176,16 @@
                     <fieldset class="installation">
                         <form action="{{ route('install.requirement') }}">
                             <div class="step-title mb-25">
-                                <h3> Welcome to the EduLab Application Installer! </h3>
+                                <h3> Welcome to the LMS Application Installer! </h3>
                                 <p>
                                     We understand the value of your time and the importance of a seamless installation
                                     experience. That's why we've designed a user-friendly installer to make setting up
-                                    EduLab
-                                    effortless.
+                                    LMS effortless.
                                     Say goodbye to complex setups and hello to a streamlined, intuitive process. Let’s get
                                     started and bring your learning platform to life in just a few simple steps!
                                 </p>
                             </div>
-                            <div class="step-btn-group text-center">
+                            <div class="text-center step-btn-group">
                                 <button type="submit" class=" next-btn">Get Started
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24">
@@ -558,7 +557,7 @@
 
                         @if (request()->is('install/final'))
                             <canvas id="custom_canvas"> </canvas>
-                            <div class="info mb-3">
+                            <div class="mb-3 info">
                                 <h1>🎉 Congratulations!</h1>
                                 <h2>You're All Set Up and Ready to Go!</h2>
                             </div>

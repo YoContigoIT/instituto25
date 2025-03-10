@@ -1,5 +1,5 @@
 @php
-    if (empty( $testimonials )) {
+    if (empty($testimonials)) {
         return;
     }
     $totalTestimonials = $testimonials->count() == 0 ? 0 : $testimonials->count() . ' +';
@@ -7,12 +7,12 @@
 <div class="bg-white pt-16 sm:pt-24 lg:pt-[120px]">
     <div class="container">
         <!-- HEADER -->
-        <div class="grid grid-cols-12 gap-4 items-center">
+        <div class="grid items-center grid-cols-12 gap-4">
             <div class="col-span-full text-center max-w-[594px] mx-auto">
                 <div class="area-subtitle">
                     {{ translate('Testimonials') }}
                 </div>
-                <h2 class="area-title mt-2">
+                <h2 class="mt-2 area-title">
                     {{ translate('Edulab Received More than') }}
                     <span class="title-highlight-one">{{ $totalTestimonials }}</span>
                     {{ translate('Reviews') }}

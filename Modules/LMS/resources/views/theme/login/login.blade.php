@@ -7,17 +7,17 @@
 @endphp
 
 <x-auth-layout class="home-online-education" :data="$settings">
-    <div class="min-w-full min-h-screen flex items-center">
-        <div class="grow min-h-screen h-full w-full lg:w-1/2 p-3 bg-primary-50 hidden lg:flex-center">
+    <div class="flex items-center min-w-full min-h-screen">
+        <div class="hidden w-full h-full min-h-screen p-3 grow lg:w-1/2 bg-primary-50 lg:flex-center">
             <img data-src="{{ asset('lms/frontend/assets/images/auth/auth-loti.svg') }}" alt="loti">
         </div>
-        <div class="grow min-h-screen h-full w-full lg:w-1/2 pt-32 pb-12 px-3 lg:p-3 flex-center flex-col">
+        <div class="flex-col w-full h-full min-h-screen px-3 pt-32 pb-12 grow lg:w-1/2 lg:p-3 flex-center">
             <h2 class="area-title">{{ translate('Sign In') }}!</h2>
-            <p class="area-description max-w-screen-sm mx-auto text-center mt-5">
+            <p class="max-w-screen-sm mx-auto mt-5 text-center area-description">
                 {{ translate('Discover, learn, and thrive with us. Experience a smooth and rewarding educational adventure. Let\'s get started') }}!
             </p>
 
-            <div class="dashkit-tab flex-center gap-2 flex-wrap mt-10" id="userRegisterTab">
+            <div class="flex-wrap gap-2 mt-10 dashkit-tab flex-center" id="userRegisterTab">
                 <button type="button" aria-label="Login tab for Student"
                     class="dashkit-tab-btn login-credentials btn b-light btn-primary-light btn-lg h-11 !rounded-full text-[14px] sm:text-[16px] md:text-[18px] [&.active]:bg-primary [&.active]:text-white active"
                     id="asStudent">
@@ -52,7 +52,7 @@
                             <div class="col-span-full">
                                 <div class="relative">
                                     <input type="email" name="email" id="admin_email"
-                                        class="form-input rounded-full peer" placeholder="" />
+                                        class="rounded-full form-input peer" placeholder="" />
                                     <label for="admin_email"
                                         class="form-label floating-form-label">{{ translate('Email') }} <span
                                             class="text-danger">*</span></label>
@@ -62,13 +62,13 @@
                             <div class="col-span-full">
                                 <div class="relative">
                                     <input type="password" name="password" id="admin_password"
-                                        class="form-input rounded-full peer" placeholder="" />
+                                        class="rounded-full form-input peer" placeholder="" />
                                     <label for="admin_password"
                                         class="form-label floating-form-label">{{ translate('Password') }} <span
                                             class="text-danger">*</span></label>
                                     <!-- type toggler -->
                                     <label
-                                        class="size-8 rounded-full cursor-pointer flex-center hover:bg-gray-200 focus:bg-gray-200 absolute top-1/2 -translate-y-1/2 right-2 rtl:right-auto rtl:left-2">
+                                        class="absolute -translate-y-1/2 rounded-full cursor-pointer size-8 flex-center hover:bg-gray-200 focus:bg-gray-200 top-1/2 right-2 rtl:right-auto rtl:left-2">
                                         <input type="checkbox" class="inputTypeToggle peer/it" hidden>
                                         <i
                                             class="ri-eye-off-line text-gray-500 dark:text-dark-text peer-checked/it:before:content-['\ecb5']"></i>
@@ -88,8 +88,8 @@
                 </div>
             </div>
             <div
-                class="flex-center w-full max-w-screen-sm py-6 h-max relative text-heading dark:text-white font-normal before:absolute inset-0 before:w-full before:h-px before:bg-border">
-                <span class="relative z-10 px-5 bg-white text-sm">{{ translate('OR') }}</span>
+                class="relative inset-0 w-full max-w-screen-sm py-6 font-normal flex-center h-max text-heading dark:text-white before:absolute before:w-full before:h-px before:bg-border">
+                <span class="relative z-10 px-5 text-sm bg-white">{{ translate('OR') }}</span>
             </div>
             <div class="text-heading">
                 {{ translate('Don\'t have an account yet') }}?

@@ -744,7 +744,7 @@ class CourseRepository extends BaseRepository
             $data = [
                 'user_name' => $instructor?->userable?->first_name . ' ' . $instructor?->userable?->last_name,
                 'email' => $instructor->email,
-                'app_name' => env('APP_NAME') ?? 'EduLab',
+                'app_name' => env('APP_NAME') ?? 'LMS',
                 'course_title' => $course->title,
                 'course_status' => $course->status,
             ];

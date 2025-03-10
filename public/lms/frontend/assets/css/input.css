@@ -16,19 +16,19 @@
 @layer base {
     :root {
         --color-primary: #6a1c32;
-        --color-primary-50: #f5e2e6; /* Muy claro, casi blanco con un toque */
-        --color-primary-100: #ead2d8; /* Ligero, suave */
-        --color-primary-200: #e0c2c8; /* Un poco más de presencia */
-        --color-secondary: #f4b826;
-        --color-heading: #111827;
+        --color-primary-50: #f5e2e6;
+        --color-primary-100: #ead2d8;
+        --color-primary-200: #e0c2c8;
+        --color-secondary: #be9657;
+        --color-heading: #5b5b5b;
 
         /* FOR VIDEO PLAYER */
-        --plyr-font-family: "Mulish", sans-serif;
-        --plyr-color-main: #f4b826;
-        --plyr-video-background: #111827;
+        --plyr-font-family: "Montserrat", sans-serif;
+        --plyr-color-main: #be9657;
+        --plyr-video-background: #5b5b5b;
 
-        --font-primary: "Mulish", sans-serif;
-        --font-secondary: "Public Sans", sans-serif;
+        --font-primary: "Montserrat", sans-serif;
+        --font-secondary: "Montserrat", sans-serif;
     }
 
     /* HOME E-LEARNING EDUCATION */
@@ -39,7 +39,7 @@
     /* HOME LMS EDUCATION */
     .home-lms-education {
         --color-primary: #17423b;
-        --font-secondary: "Roboto", sans-serif;
+        --font-secondary: "Montserrat", sans-serif;
     }
 
     /* HOME DIGITAL EDUCATION */
@@ -52,7 +52,7 @@
     /* HOME KINDERGARTERN */
     .home-kindergarten {
         --color-primary: #00a264;
-        --font-secondary: "Newsreader", sans-serif;
+        --font-secondary: "Montserrat", sans-serif;
     }
 
     html {

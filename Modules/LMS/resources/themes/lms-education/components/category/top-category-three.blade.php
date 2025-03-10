@@ -6,7 +6,8 @@
                 <!-- HEADER -->
                 <div class="grid grid-cols-12 gap-4 items-center">
                     <div class="col-span-full text-center max-w-[594px] mx-auto">
-                        <div class="area-subtitle subtitle-outline style-two !border-[#F4B826]/15 text-sm uppercase !text-secondary">
+                        <div
+                            class="area-subtitle subtitle-outline style-two !border-[#BE9657]/15 text-sm uppercase !text-secondary">
                             {{ translate('Courses Categories') }}
                         </div>
                         <h2 class="area-title text-white mt-2">
@@ -16,7 +17,7 @@
                 </div>
                 <!-- BODY -->
                 <div class="grid grid-cols-12 gap-x-4 xl:gap-x-7 gap-y-7 mt-[60px]">
-                    @foreach( $categories as $category )
+                    @foreach ($categories as $category)
                         <x-theme::cards.category.card-three :category="$category" />
                     @endforeach
                 </div>

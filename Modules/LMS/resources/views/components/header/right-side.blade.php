@@ -74,7 +74,7 @@
 <!-- CART LIST -->
 @if ($cart['is_show'] ?? true)
     <a href="{{ $cart['url'] ?? route('cart.page') }}" aria-label="Cart icon"
-        class="relative hidden md:flex text-heading px-2 py-3 shrink-0">
+        class="relative hidden px-2 py-3 md:flex text-heading shrink-0">
         <img data-src="{{ $cart['icon_image'] ?? asset('lms/frontend/assets/images/icons/cart.svg') }}" alt="Icon">
         <span
             class="{{ $cart['badge_class'] ?? 'flex-center size-6 rounded-50 bg-primary text-xs text-white border-2 border-white absolute top-0 -right-1 rtl:right-auto rtl:-left-1 total-qty' }}">{{ total_qty() }}</span>
@@ -84,20 +84,20 @@
 <div class="flex gap-4 shrink-0">
     @auth
         <a href="{{ $url }}" aria-label="Profile info"
-            class="{{ $loggedin['link_class'] ?? 'btn b-outline btn-secondary-outline h-11 !rounded-full !text-heading font-semibold' }}">
+            class="{{ $loggedin['link_class'] ?? 'btn b-outline btn-secondary-outline h-11 !rounded-full !text-dark font-semibold' }}">
             <span class="hidden md:block"><i class="ri-user-3-line"></i></span>
             {{ $user?->name ?? $user->first_name }}
         </a>
     @else
         @if (Auth::guard('admin')->check())
             <a href="{{ route('admin.dashboard') }}" aria-label="Profile info"
-                class="{{ $loggedin['link_class'] ?? 'btn b-outline btn-secondary-outline h-11 !rounded-full !text-heading font-semibold' }}">
+                class="{{ $loggedin['link_class'] ?? 'btn b-outline btn-secondary-outline h-11 !rounded-full !text-dark font-semibold' }}">
                 <span class="hidden md:block"><i class="ri-user-3-line"></i></span>
                 {{ auth('admin')->user()->name }}
             </a>
         @elseif ($login['is_show'] ?? true)
             <a href="{{ $login['url'] ?? route('login') }}" aria-label="Log in"
-                class="{{ $login['link_class'] ?? 'flex btn b-outline btn-secondary-outline h-11 !rounded-full !text-heading font-semibold' }}">
+                class="{{ $login['link_class'] ?? 'flex btn b-outline btn-secondary-outline h-11 !rounded-full !text-dark font-semibold' }}">
                 <span class="hidden md:block"><i class="ri-user-3-line"></i></span>
                 {{ translate($login['label'] ?? 'Log In') }}
             </a>
@@ -105,7 +105,7 @@
     @endauth
     @if (!Auth::guard('admin')->check() && !Auth::guard('web')->check() && ($register['is_show'] ?? true))
         <a href="{{ $register['url'] ?? route('auth.register') }}" aria-label="Registration"
-            class="{{ $register['link_class'] ?? 'hidden md:flex btn b-solid btn-secondary-solid h-11 !rounded-full !text-heading font-semibold' }}">
+            class="{{ $register['link_class'] ?? 'hidden md:flex btn b-solid btn-secondary-solid h-11 !rounded-full !text-dark font-semibold' }}">
             {{ translate($register['label'] ?? 'Sign up') }}
             @if ($register['show_icon'] ?? true)
                 <span class="hidden md:block">

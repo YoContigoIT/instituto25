@@ -53,13 +53,13 @@
     <!-- END UPCOMING COURSE AREA -->
 
     <!-- START INSTRUCTOR AREA -->
-    <x-theme::instructor.top-instructor :instructors="$data['instructors']" />
+    {{-- <x-theme::instructor.top-instructor :instructors="$data['instructors']" /> --}}
     <!-- END INSTRUCTOR AREA -->
 
     <!-- START ONLINE VIDEO COURSE AREA -->
-    <x-theme::join-us.join-us />
+    {{-- <x-theme::join-us.join-us /> --}}
     <!-- END ONLINE VIDEO COURSE AREA -->
 
-    <x-theme::blog.latest-blog-one :blogs="$data['blogs']" />
+    {{-- <x-theme::blog.latest-blog-one :blogs="$data['blogs']" /> --}}
 
 </x-frontend-layout>
